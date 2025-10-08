@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estudos Integrados — Vestibular + Técnico</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+  <span class="logo-emoji" role="img" aria-label="chapéu de formatura">🎓</span>
+</div>
+
+      <div>
+        <div class="title">Estudos Integrados</div>
+        <div class="subtitle">Vestibular + Técnico • Organização inteligente</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn ghost small" id="toggleTheme">Tema: Claro/Escuro</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Selecione uma matéria</h2>
+      <div class="subjects-grid" id="subjectsGrid">
+        <!-- Botões das matérias -->
+      <button class="btn subject-btn" data-subject="portugues">
+  <span class="subject-label">Português</span>
+  <span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">✏️</span>
+  </span>
+</button>
+
+        <button class="btn subject-btn" data-subject="matematica">
+          <span>Matemática</span> <span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🎲</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="historia">
+          <span>História</span> <span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🗿</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="geografia">
+          <span>Geografia</span> <span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🌍</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="biologia">
+          <span>Biologia</span><span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🍂</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="quimica">
+          <span>Química</span><span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🧪</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="fisica">
+          <span>Física</span><span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🎶</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="literatura">
+          <span>Literatura</span><span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🛡</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="sociologia">
+          <span>Sociologia</span><span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">👨‍👩‍👦</span>
+  </span>
+        </button>
+        <button class="btn subject-btn" data-subject="filosofia">
+          <span>Filosofia</span><span class="subject-icon" aria-hidden="true">
+    <span class="emoji" role="img" aria-label="lápis">🧠</span>
+  </span>
+        </button>
+      </div>
+
+      <!-- Listas de tópicos por matéria -->
+      <section id="topics-portugues" class="topics">
+        <h3>Português — tópicos</h3>
+        <div class="topics-grid">
+          <!-- EDITAR AQUI: adicione/remova tópicos. Cada botão aponta para um bloco de conteúdo via data-topic -->
+          <button class="btn topic-btn" data-topic="pt-interpretacao">Interpretação de textoses<span>→</span></button>
+          <button class="btn topic-btn" data-topic="pt-sintaxe">Sintaxe e funções</button>
+        </div>
+      </section>
+
+      <section id="topics-matematica" class="topics">
+        <h3>Matemática — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="mat-funcoes">Funções e gráficos</button>
+          <button class="btn topic-btn" data-topic="mat-probabilidade">Probabilidade básica</button>
+        </div>
+      </section>
+
+      <section id="topics-historia" class="topics">
+        <h3>História — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="his-br-imperio">Brasil Império</button>
+        </div>
+      </section>
+
+      <section id="topics-geografia" class="topics">
+        <h3>Geografia — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="geo-urbanizacao">Urbanização no Brasil</button>
+        </div>
+      </section>
+
+      <section id="topics-biologia" class="topics">
+        <h3>Biologia — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="bio-Relações ecologicas">Relações ecologicas</button>
+        </div>
+      </section>
+
+      <section id="topics-quimica" class="topics">
+        <h3>Química — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="qui-estequiometria">Estequiometria</button>
+        </div>
+      </section>
+
+      <section id="topics-fisica" class="topics">
+        <h3>Física — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="fis-cinematica">Cinemática</button>
+        </div>
+      </section>
+
+      <section id="topics-literatura" class="topics">
+        <h3>Literatura — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="lit-literatura">Definição literatura</button>
+        </div>
+      </section>
+
+      <section id="topics-sociologia" class="topics">
+        <h3>Sociologia — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="soc-estrutura">Estrutura social</button>
+        </div>
+      </section>
+
+      <section id="topics-filosofia" class="topics">
+        <h3>Filosofia — tópicos</h3>
+        <div class="topics-grid">
+          <button class="btn topic-btn" data-topic="fil-eticamoral">Ética e moral</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Overlay e Modal -->
+  <div class="overlay" id="overlay"></div>
+  <div class="study-modal" id="studyModal" aria-modal="true" role="dialog">
+    <div class="modal-header">
+      <div class="modal-title">
+        <span id="modalSubject">Matéria</span> • <span id="modalTopic">Tópico</span>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="btn tab active" data-tab="conteudo">Conteúdo</button>
+      <button class="btn tab" data-tab="flashcards">Flashcards</button>
+      <button class="btn tab" data-tab="quiz">Quiz</button>
+      <div style="margin-left:auto">
+        <button class="btn ghost small" id="closeModal">Fechar</button>
+      </div>
+    </div>
+
+    <div class="tab-panels">
+      <div id="panel-conteudo" class="panel active">
+        <div class="content-area" id="contentArea">
+          <!-- O conteúdo do tópico será injetado aqui -->
+        </div>
+      </div>
+      <div id="panel-flashcards" class="panel">
+        <div class="flashcards-list" id="flashcardsList">
+          <!-- Os flashcards do tópico serão injetados aqui -->
+        </div>
+      </div>
+      <div id="panel-quiz" class="panel">
+        <div class="quiz" id="quizArea">
+          <!-- O quiz do tópico será injetado aqui -->
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <small>Hérois são forjados na agonia.</small>
+    </div>
+  </div>
+
+  <!-- Blocos de conteúdo por tópico (EDITAR AQUI) -->
+  <!-- PORTUGUÊS -->
+  <template id="tpl-pt-interpretacao">
+    <section>
+      <h4>Interpretação de textos</h4>
+      <p>Alguem estuda português em pleno século 2025?</p>
+      <p>Pratique com diferentes gêneros: crônica, notícia, artigo, poema. Busque o que está explícito e o que está subentendido.</p>
+    </section>
+    <section data-type="flashcards">
+      <!-- Cada flip-card = 1 cartão (frente/verso) -->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Tema x Tese</div>
+          <div class="flip-face back">Tema é o assunto geral; tese é a posição defendida.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Conectores</div>
+          <div class="flip-face back">Estabelecem relações: causa, oposição, conclusão etc.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+     <div class="question-block quiz-question" data-index="0">
+        <div class="question-text">1 Um texto argumentativo se caracteriza por:</div>
+        <div class="choices" data-correct="2">
+        <div class="choice">1. Predominância de narração de fatos cotidianos</div>
+        <div class="choice">2. Descrição detalhada de cenários e personagens</div>
+        <div class="choice">3. Defesa de um ponto de vista com argumentos</div>
+        <div class="choice">4. Uso exclusivo de linguagem figurada</div>
+        <div class="choice">5. Ausência de opinião do autor</div>
+      </div>
+      <div class="explanation">Texto argumentativo visa sustentar uma tese por meio de argumentos e evidências.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <template id="tpl-pt-sintaxe">
+    <section>
+      <h4>Sintaxe e funções</h4>
+      <p>Análise sintática avalia relações entre termos da oração: sujeito, predicado, complementos e adjuntos.</p>
+      <p>Observe concordância, regência e pontuação para interpretar sentidos e evitar ambiguidade.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Sujeito</div>
+          <div class="flip-face back">Termo sobre o qual se declara algo no predicado.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Objeto direto</div>
+          <div class="flip-face back">Complementa o verbo sem preposição.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+     <div class="question-block quiz-question" data-index="0">
+        <div class="question-text">1 No periodo "os alunos fizeram a prova" "a prova" é uma:</div>
+        <div class="choices" data-correct="0">
+        <div class="choice">1. Objeto direto</div>
+        <div class="choice">2. Sujeito</div>
+        <div class="choice">3. Predicativo</div>
+        <div class="choice">4. Adjunto adverbial</div>
+        <div class="choice">5. Objeto indireto</div>
+      </div>
+      <div class="explanation">“Fizeram (algo)” → complemento direto do verbo fazer, sem preposição.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- MATEMÁTICA -->
+  <template id="tpl-mat-funcoes">
+    <section>
+      <h4>Funções e gráficos</h4>
+      <p>Função relaciona cada x a um único y. Analise domínio, imagem, interceptos e crescimento/decrescimento.</p>
+      <p>Função afim: y = ax + b. a indica inclinação; b, intercepto em y.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Domínio</div>
+          <div class="flip-face back">Conjunto de valores de entrada permitidos para x.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Coeficiente angular (a)</div>
+          <div class="flip-face back">Define a inclinação: positivo cresce; negativo decresce.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">Na função y = 2x + 3, o valor de y quando x = 0 é:</div>
+      <div class="choices" data-correct="0">
+        <div class="choice">1. 3</div>
+        <div class="choice">2. 2</div>
+        <div class="choice">3. 0</div>
+        <div class="choice">4. 5</div>
+        <div class="choice">5. 1</div>
+      </div>
+      <div class="explanation">Intercepto em y ocorre quando x=0: y = 2·0 + 3 = 3.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <template id="tpl-mat-probabilidade">
+    <section>
+      <h4>Probabilidade básica</h4>
+      <p>Probabilidade de um evento: casos favoráveis / casos possíveis, com resultados equiprováveis.</p>
+      <p>Use princípio multiplicativo para eventos independentes e soma para mutuamente exclusivos.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Equiprovável</div>
+          <div class="flip-face back">Todos os resultados têm mesma chance.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Eventos independentes</div>
+          <div class="flip-face back">P(A ∩ B) = P(A)·P(B).</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">Ao lançar um dado honesto, a probabilidade de sair número par é:</div>
+      <div class="choices" data-correct="1">
+        <div class="choice">1. 3/6</div>
+        <div class="choice">2. 1/6</div>
+        <div class="choice">3. 2/6</div>
+        <div class="choice">4. 5/6</div>
+        <div class="choice">5. 0</div>
+      </div>
+      <div class="explanation">Números pares: 2,4,6 → 3 de 6 possíveis = 1/2 = 3/6.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- HISTÓRIA -->
+  <template id="tpl-his-br-imperio">
+    <section>
+      <h4>Brasil Império</h4>
+      <p>Período de 1822 a 1889, marcado por centralização política e debates sobre escravidão e cidadania.</p>
+      <p>Destacam-se o Segundo Reinado e transformações econômicas com o café.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Lei Áurea</div>
+          <div class="flip-face back">1888: aboliu oficialmente a escravidão no Brasil.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">A proclamação da República ocorreu em:</div>
+      <div class="choices" data-correct="3">
+        <div class="choice">1. 1822</div>
+        <div class="choice">2. 1840</div>
+        <div class="choice">3. 1889</div>
+        <div class="choice">4. 1891</div>
+        <div class="choice">5. 1930</div>
+      </div>
+      <div class="explanation">A República foi proclamada em 15 de novembro de 1889.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- GEOGRAFIA -->
+  <template id="tpl-geo-urbanizacao">
+    <section>
+      <h4>Urbanização no Brasil</h4>
+      <p>Processo acelerado no século XX, com migração campo-cidade e expansão de metrópoles.</p>
+      <p>Desafios: infraestrutura, mobilidade, habitação e desigualdades socioespaciais.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Metrópole</div>
+          <div class="flip-face back">Cidade com grande influência econômica e cultural.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">A urbanização brasileira intensificou-se com:</div>
+      <div class="choices" data-correct="0">
+        <div class="choice">1. Industrialização no século XX</div>
+        <div class="choice">2. Ciclo do ouro no século XVIII</div>
+        <div class="choice">3. Ciclo da borracha no século XIX</div>
+        <div class="choice">4. Criação de Brasília</div>
+        <div class="choice">5. Reforma agrária</div>
+      </div>
+      <div class="explanation">A industrialização atraiu mão de obra e acelerou a urbanização.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- BIOLOGIA -->
+  <template id="tpl-bio-Relações ecologicas">
+    <section>
+      <h4>Relações ecologicas</h4>
+      <p>Os seres vivos precisam relacionar entre si e entre os outros seres vivos, seja essa interação harmonica ou não.</p>
+      <p>Conceitos importantes:</p>
+      <ul>
+        <li>Ecobiose: A interação dos seres vivos e o meio abiotico.</li>
+        <li>Alelobiose: A interação dos seres vivos entre outros seres vivos.</li>
+        <li>Intraespecífica: Interação entre seres vivos da mesma espécie.</li>
+        <li>Interespecífica: Interação entre seres vivos de espécies diferentes.</li>
+        <li>Interação harmonica: Ninguem sai prejudicado na interação.</li>
+        <li>Interação desarmonica: No mínimo, um dos dois seres interagidos sairá prejudicado.</li>
+      </ul>
+      <p>Relações intra harmonicas:</p>
+          <ul>
+            <li>Colônia (+/+): Seres que foram juntados biologicamente. Ex: comeia de abelhas.</li>
+            <li>Sociedade (+/+): Seres juntos e organizados politicamente.Ex: Uma país (para os humanos).</li>
+          </ul>
+        <p>Relações Intra desarmonicas</p>
+           <ul>
+            <li>Canibalismo (+/-): Seres se alimentarem de alguem da propria espécie. Ex: Um frango comendo um nugget. </li>
+            <li>Competição intraespecífica (-/-): Competições entre a propria espécie. Ex: Dois machos brigando por uma femea.</li>
+          </ul>
+        <p>Relações Inter harmonicas</p>
+           <ul>
+            <li>Mutualismo (+/+): Um ser ajudando o outro, sendo nescessário para a sobrevivência. Ex: Relação da abelha e da flor.</li>
+            <li>Protocooperação (+/+): Um ser ajudando o outro volutatiamente. Ex: Pássaro palito e crocodilo.</li>
+            <li>Comensalismo (+/0): Um ser se aproveita do outro sem prejudica-lo. Ex: Relação entre a Remona e o Tubarão, onde a Remona se aliemnta dos restos do tubarão.</li>
+            <li>Inquilismo (+/0): Um ser busca moradia no outro sem prejudica-lo. Ex: O peixe agulha vive dentro do penino-do-mar.</li>
+          </ul>
+          <p>Relações Inter desarmonicas</p>
+           <ul>
+            <li>Predação (+/-): Um ser se alimentando do outro. Ex: O gato come um pássaro.</li>
+            <li>Parasitismo (+/-): Um ser se alimentando do outro, sem matar o hospedeiro. Ex:Um vírus.</li>
+            <li>Amensalismo (-/0): Um ser gerá algo negativo para o outro mas não se beneficia diretamente disso. Ex:O eucalipto libera uma toxina que maat as plantas ao redor.</li>
+            <li>Competição intraespecífica (-/-): Competição entre seres de espécies diferente. Ex:Disputa de território.</li>
+          </ul>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Relação ecológica</div>
+          <div class="flip-face back">A interação entre seres vivos.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Relação harmonica</div>
+          <div class="flip-face back">Uma relação entre seres vivos que nenhum dos dois sai prejudicado.</div>
+        </div>
+      </div>
+        <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Relação desarmonica</div>
+          <div class="flip-face back">Uma relação entre seres vivosem que pelo menos um dos dois lados sai prejudicado.</div>
+        </div>
+      </div>
+       <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Dê exemplos de relações intra harmônica</div>
+          <div class="flip-face back">Colônia e Sociedade.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Dê exemplos de relações inter harmônica</div>
+          <div class="flip-face back">Mutualismo, Protocooperação, comensalismo e inquilismo.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Dê exemplos de relações inter desarmônica</div>
+          <div class="flip-face back">.Canibalismo e competição intraespecífica</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Dê exemplos de relações intra desarmônica</div>
+          <div class="flip-face back">.Predação, parasitismo, amensalismo e competição intraespecífica</div>
+        </div>
+      </div>
+      
+    </section>
+    <section data-type="quiz">
+    <div class="question-block quiz-question" data-index="0">
+  <div class="question-text">1. Qual a diferença de uma colônia e uma sociedade?</div>
+  <div class="choices" data-correct="3">
+    <div class="choice">1. A colônia é limitada a abelhas e a sociedade é limitada a humanos</div>
+    <div class="choice">2. A colônia tem que ser pequena e a sociedade tem que ser grande</div>
+    <div class="choice">3. A colônia tem que ser grande e a sociedade tem que ser pequena</div>
+    <div class="choice">4. A sociedade é organizada politicamente e a colônia não</div>
+    <div class="choice">5. N.D.A.</div>
+  </div>
+  <div class="explanation">A sociedade apresenta divisão de trabalho e organização social entre indivíduos, enquanto a colônia é formada por organismos interligados fisicamente ou dependentes entre si.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="1">
+  <div class="question-text">2. Em uma relação ecológica interespecífica harmônica, ambas as espécies...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. São beneficiadas</div>
+    <div class="choice">2. São prejudicadas</div>
+    <div class="choice">3. Apenas uma é beneficiada</div>
+    <div class="choice">4. Nenhuma é afetada</div>
+    <div class="choice">5. Competem diretamente</div>
+  </div>
+  <div class="explanation">Nas relações harmônicas interespecíficas, como o mutualismo, ambas as espécies se beneficiam da interação.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="2">
+  <div class="question-text">3. A relação entre o boi e os microorganismos do seu rúmen é exemplo de...</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">1. Comensalismo</div>
+    <div class="choice">2. Mutualismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Protocooperação</div>
+  </div>
+  <div class="explanation">Os microorganismos ajudam na digestão da celulose e recebem abrigo e alimento, caracterizando mutualismo obrigatório.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="3">
+  <div class="question-text">4. A competição interespecífica ocorre quando...</div>
+  <div class="choices" data-correct="2">
+    <div class="choice">1. Indivíduos da mesma espécie disputam recursos</div>
+    <div class="choice">2. Uma espécie se alimenta de outra</div>
+    <div class="choice">3. Espécies diferentes disputam os mesmos recursos</div>
+    <div class="choice">4. Um indivíduo prejudica outro sem se beneficiar</div>
+    <div class="choice">5. Há cooperação entre espécies</div>
+  </div>
+  <div class="explanation">A competição interespecífica é a disputa entre espécies diferentes por recursos limitados.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="4">
+  <div class="question-text">5. O líquen é uma associação entre fungo e alga. Essa relação é classificada como...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Inquilinismo</div>
+    <div class="choice">5. Protocooperação</div>
+  </div>
+  <div class="explanation">O líquen é um exemplo clássico de mutualismo, em que fungo e alga se beneficiam mutuamente.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="5">
+  <div class="question-text">6. Quando uma rêmora se fixa em um tubarão para se locomover e obter restos de alimento, ocorre...</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Competição</div>
+  </div>
+  <div class="explanation">A rêmora se beneficia sem causar prejuízo ao tubarão, caracterizando comensalismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="6">
+  <div class="question-text">7. A relação entre o carrapato e o boi é um exemplo de...</div>
+  <div class="choices" data-correct="2">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Inquilinismo</div>
+  </div>
+  <div class="explanation">O carrapato se alimenta do sangue do boi, beneficiando-se e causando prejuízo, sendo uma relação parasitária.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="7">
+  <div class="question-text">8. O inquilinismo é uma relação em que...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Um organismo usa outro como abrigo, sem prejudicá-lo</div>
+    <div class="choice">2. Um organismo vive às custas de outro</div>
+    <div class="choice">3. Duas espécies competem pelo mesmo recurso</div>
+    <div class="choice">4. Ambos se beneficiam obrigatoriamente</div>
+    <div class="choice">5. Há liberação de substâncias tóxicas</div>
+  </div>
+  <div class="explanation">O inquilinismo ocorre quando um organismo se abriga em outro sem causar prejuízo, como peixes que vivem em anêmonas.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="8">
+  <div class="question-text">9. No amensalismo, uma espécie é prejudicada e a outra...</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">1. Também é prejudicada</div>
+    <div class="choice">2. Não é afetada</div>
+    <div class="choice">3. É beneficiada</div>
+    <div class="choice">4. Se torna parasita</div>
+    <div class="choice">5. Compete igualmente</div>
+  </div>
+  <div class="explanation">No amensalismo, uma espécie libera substâncias que inibem outra, mas não obtém benefício direto.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="9">
+  <div class="question-text">10. As orquídeas que crescem sobre árvores sem prejudicá-las exemplificam...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Inquilinismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Mutualismo</div>
+    <div class="choice">5. Amensalismo</div>
+  </div>
+  <div class="explanation">As orquídeas utilizam as árvores apenas como suporte físico, caracterizando inquilinismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="10">
+  <div class="question-text">11. A relação entre o gado e as garças-boieiras é um exemplo de...</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Inquilinismo</div>
+    <div class="choice">5. Amensalismo</div>
+  </div>
+  <div class="explanation">As garças se alimentam de insetos espantados pelo gado, sem causar prejuízo ao animal.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="11">
+  <div class="question-text">12. Quando fungos impedem o crescimento de bactérias pela liberação de antibióticos, ocorre...</div>
+  <div class="choices" data-correct="3">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Parasitismo</div>
+    <div class="choice">3. Competição</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Protocooperação</div>
+  </div>
+  <div class="explanation">O fungo inibe o crescimento bacteriano sem se beneficiar diretamente, o que caracteriza amensalismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="12">
+  <div class="question-text">13. A relação entre o peixe-palhaço e a anêmona-do-mar é...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Inquilinismo</div>
+    <div class="choice">5. Amensalismo</div>
+  </div>
+  <div class="explanation">O peixe-palhaço é protegido pelos tentáculos da anêmona e a defende de predadores, sendo um caso de mutualismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="13">
+  <div class="question-text">14. Quando duas espécies vivem juntas e ambas se beneficiam, mas não dependem totalmente uma da outra, ocorre...</div>
+  <div class="choices" data-correct="4">
+    <div class="choice">1. Mutualismo obrigatório</div>
+    <div class="choice">2. Parasitismo</div>
+    <div class="choice">3. Inquilinismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Protocooperação</div>
+  </div>
+  <div class="explanation">Na protocooperação, ambas as espécies se beneficiam, mas podem viver separadamente.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="14">
+  <div class="question-text">15. A relação entre uma planta e o fungo micorrízico em suas raízes é exemplo de...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Inquilinismo</div>
+    <div class="choice">5. Amensalismo</div>
+  </div>
+  <div class="explanation">O fungo aumenta a absorção de nutrientes da planta, e a planta fornece compostos orgânicos ao fungo — mutualismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="15">
+  <div class="question-text">16. A relação entre seres humanos e bactérias intestinais é exemplo de...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Inquilinismo</div>
+  </div>
+  <div class="explanation">As bactérias ajudam na digestão e produzem vitaminas, beneficiando-se do ambiente intestinal — mutualismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="16">
+  <div class="question-text">17. As formigas que protegem as acácias em troca de abrigo e alimento representam...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Parasitismo</div>
+    <div class="choice">3. Comensalismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Competição</div>
+  </div>
+  <div class="explanation">As formigas defendem a planta contra herbívoros e recebem abrigo, um exemplo de mutualismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="17">
+  <div class="question-text">18. As abelhas e as flores mantêm uma relação de...</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Parasitismo</div>
+    <div class="choice">3. Amensalismo</div>
+    <div class="choice">4. Comensalismo</div>
+    <div class="choice">5. Inquilinismo</div>
+  </div>
+  <div class="explanation">As flores são polinizadas pelas abelhas, que recebem néctar como alimento — mutualismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="18">
+  <div class="question-text">19. Quando um fungo vive sobre uma árvore e causa a morte de parte de seus tecidos, temos um caso de...</div>
+  <div class="choices" data-correct="2">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Parasitismo</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Inquilinismo</div>
+  </div>
+  <div class="explanation">O fungo se beneficia ao retirar nutrientes da planta, que é prejudicada, caracterizando parasitismo.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="19">
+  <div class="question-text">20. Quando uma espécie impede outra de utilizar o mesmo habitat devido à exclusão competitiva, temos um exemplo de...</div>
+  <div class="choices" data-correct="2">
+    <div class="choice">1. Mutualismo</div>
+    <div class="choice">2. Comensalismo</div>
+    <div class="choice">3. Competição interespecífica</div>
+    <div class="choice">4. Amensalismo</div>
+    <div class="choice">5. Inquilinismo</div>
+  </div>
+  <div class="explanation">A exclusão competitiva ocorre quando uma espécie elimina outra de um mesmo nicho ecológico devido à competição.</div>
+</div>
+
+       <div class="quiz-nav">
+  <div class="quiz-nav">
+  <button class="btn small" id="prevQuestion">Anterior</button>
+  <button class="btn small" id="nextQuestion">Próxima</button>
+  <button class="btn small" id="finishQuiz">Finalizar Quiz</button>
+</div>
+<div class="quiz-result" id="quizResult" style="display:none;"></div>
+
+  </div>
+    </section>
+  </template>
+
+  <!-- QUÍMICA -->
+  <template id="tpl-qui-estequiometria">
+    <section>
+      <h4>Estequiometria</h4>
+      <p>Relaciona quantidades de reagentes e produtos em reações, com base em mol, massa e proporções balanceadas.</p>
+      <p>Use a equação balanceada para criar relações entre substâncias.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Mol</div>
+          <div class="flip-face back">Quantidade que contém 6,022×10²³ entidades.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">O balanceamento garante:</div>
+      <div class="choices" data-correct="2">
+        <div class="choice">1. Velocidade da reação</div>
+        <div class="choice">2. Conservação de massa</div>
+        <div class="choice">3. Pressão constante</div>
+        <div class="choice">4. Temperatura ideal</div>
+        <div class="choice">5. Pureza do produto</div>
+      </div>
+      <div class="explanation">Leis de Lavoisier: a massa se conserva em reações químicas.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- FÍSICA -->
+  <template id="tpl-fis-cinematica">
+    <section>
+      <h4>Cinemática</h4>
+      <p>Estuda o movimento sem considerar causas. Grandezas: posição, deslocamento, velocidade e aceleração.</p>
+      <p>Movimento uniforme: velocidade constante. Uniformemente variado: aceleração constante.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Velocidade média</div>
+          <div class="flip-face back">Δs / Δt: variação do espaço pelo intervalo de tempo.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">No MRU, a posição é dada por:</div>
+      <div class="choices" data-correct="0">
+        <div class="choice">1. s = s₀ + vt</div>
+        <div class="choice">2. s = s₀ + ½at²</div>
+        <div class="choice">3. v = v₀ + at</div>
+        <div class="choice">4. a = Δv/Δt</div>
+        <div class="choice">5. s = vt²</div>
+      </div>
+      <div class="explanation">No MRU, a velocidade é constante: posição cresce linearmente com o tempo.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- LITERATURA -->
+  <template id="tpl-lit-literatura">
+    <section>
+      <h4>Definição de literatura</h4>
+      <p>A arte da palavra, sobretudo, escrita.</p>
+      <p>Os primeiros registros da literatira foram as pinturas rupestres.</p>
+      <p>A primeira forma de escrita foi a escrita mesopotâmica em 4000 a.C..</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Literatura</div>
+          <div class="flip-face back">A arte da palavra, sobretudo, escrita.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Primeira registro de literatura</div>
+          <div class="flip-face back">As pinturas rupestres.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Primeira escrita</div>
+          <div class="flip-face back"> Escrita mesopotâmica.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="question-block quiz-question" data-index="0">
+  <div class="question-text">1. O que é literatura?</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">0. É o estudo das ciências exatas e naturais</div>
+    <div class="choice">1. É uma forma de arte que utiliza a linguagem escrita ou falada como meio de expressão</div>
+    <div class="choice">2. É a escrita apenas de textos científicos e técnicos</div>
+    <div class="choice">3. É o conjunto de registros históricos de um povo</div>
+    <div class="choice">4. É o estudo das leis e das normas sociais</div>
+  </div>
+  <div class="explanation">A literatura é uma arte baseada na linguagem, usada para expressar emoções, ideias e experiências humanas.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="1">
+  <div class="question-text">2. Qual é considerado o primeiro registro literário da humanidade?</div>
+  <div class="choices" data-correct="3">
+    <div class="choice">0. A Ilíada</div>
+    <div class="choice">1. A Odisseia</div>
+    <div class="choice">2. Os textos bíblicos</div>
+    <div class="choice">3. A Epopeia de Gilgamesh</div>
+    <div class="choice">4. Os poemas de Homero</div>
+  </div>
+  <div class="explanation">A Epopeia de Gilgamesh, escrita na antiga Mesopotâmia, é considerada o primeiro registro literário conhecido.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="2">
+  <div class="question-text">3. Onde surgiu a Epopeia de Gilgamesh?</div>
+  <div class="choices" data-correct="2">
+    <div class="choice">0. Egito</div>
+    <div class="choice">1. Grécia</div>
+    <div class="choice">2. Mesopotâmia</div>
+    <div class="choice">3. Roma</div>
+    <div class="choice">4. Índia</div>
+  </div>
+  <div class="explanation">A Epopeia de Gilgamesh surgiu na Mesopotâmia, entre os rios Tigre e Eufrates, região onde nasceu a escrita cuneiforme.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="3">
+  <div class="question-text">4. O que marca o início da literatura na história?</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">0. O surgimento da escrita</div>
+    <div class="choice">1. O surgimento da imprensa</div>
+    <div class="choice">2. A invenção da narrativa oral</div>
+    <div class="choice">3. O nascimento da poesia moderna</div>
+    <div class="choice">4. A criação da literatura digital</div>
+  </div>
+  <div class="explanation">A literatura começa com o surgimento da escrita, que permitiu registrar e preservar textos.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="4">
+  <div class="question-text">5. Qual era a principal função da literatura nas civilizações antigas?</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">0. Entretenimento e lazer</div>
+    <div class="choice">1. Transmitir valores religiosos, morais e históricos</div>
+    <div class="choice">2. Ensinar matemática e ciências</div>
+    <div class="choice">3. Criar teorias filosóficas</div>
+    <div class="choice">4. Documentar batalhas militares</div>
+  </div>
+  <div class="explanation">Nas civilizações antigas, a literatura tinha forte caráter religioso e moral, transmitindo valores e tradições.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="5">
+  <div class="question-text">6. O que diferencia a literatura oral da literatura escrita?</div>
+  <div class="choices" data-correct="2">
+    <div class="choice">0. A oral é mais complexa que a escrita</div>
+    <div class="choice">1. A oral é sempre registrada em livros</div>
+    <div class="choice">2. A oral é transmitida verbalmente e a escrita é registrada em texto</div>
+    <div class="choice">3. A escrita depende da memória do narrador</div>
+    <div class="choice">4. A oral é exclusiva das civilizações modernas</div>
+  </div>
+  <div class="explanation">A literatura oral é transmitida de geração em geração pela fala, enquanto a escrita é registrada em textos.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="6">
+  <div class="question-text">7. Qual é o principal objetivo da literatura segundo os estudiosos?</div>
+  <div class="choices" data-correct="4">
+    <div class="choice">0. Convencer politicamente o leitor</div>
+    <div class="choice">1. Criar leis e normas sociais</div>
+    <div class="choice">2. Ensinar apenas fatos reais</div>
+    <div class="choice">3. Gerar lucros econômicos</div>
+    <div class="choice">4. Expressar sentimentos, ideias e experiências humanas</div>
+  </div>
+  <div class="explanation">A literatura busca expressar emoções e reflexões humanas, conectando o leitor ao mundo interior e exterior.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="7">
+  <div class="question-text">8. Como eram registrados os primeiros textos literários da humanidade?</div>
+  <div class="choices" data-correct="3">
+    <div class="choice">0. Em papiros pintados</div>
+    <div class="choice">1. Em tecidos de lã</div>
+    <div class="choice">2. Em livros impressos</div>
+    <div class="choice">3. Em tábuas de argila com escrita cuneiforme</div>
+    <div class="choice">4. Em papel reciclado</div>
+  </div>
+  <div class="explanation">Os primeiros textos literários eram gravados em tábuas de argila usando escrita cuneiforme.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="8">
+  <div class="question-text">9. A Ilíada e a Odisseia são exemplos de qual gênero literário?</div>
+  <div class="choices" data-correct="1">
+    <div class="choice">0. Tragédia</div>
+    <div class="choice">1. Epopeia</div>
+    <div class="choice">2. Comédia</div>
+    <div class="choice">3. Romance</div>
+    <div class="choice">4. Drama</div>
+  </div>
+  <div class="explanation">A Ilíada e a Odisseia são epopeias gregas atribuídas a Homero, que narram feitos heroicos e mitológicos.</div>
+</div>
+
+<div class="question-block quiz-question" data-index="9">
+  <div class="question-text">10. Por que a literatura é considerada uma forma de arte?</div>
+  <div class="choices" data-correct="0">
+    <div class="choice">0. Porque utiliza a linguagem de maneira criativa para expressar emoções e ideias</div>
+    <div class="choice">1. Porque depende exclusivamente de fatos históricos</div>
+    <div class="choice">2. Porque é sempre escrita em verso</div>
+    <div class="choice">3. Porque é usada apenas na escola</div>
+    <div class="choice">4. Porque é uma técnica de escrita automática</div>
+  </div>
+  <div class="explanation">A literatura é arte porque transforma a linguagem comum em expressão estética e simbólica.</div>
+</div>
+
+        <div class="quiz-nav">
+  <div class="quiz-nav">
+  <button class="btn small" id="prevQuestion">Anterior</button>
+  <button class="btn small" id="nextQuestion">Próxima</button>
+  <button class="btn small" id="finishQuiz">Finalizar Quiz</button>
+</div>
+<div class="quiz-result" id="quizResult" style="display:none;"></div>
+
+  </div>
+    </section>
+  </template>
+
+  <!-- SOCIOLOGIA -->
+  <template id="tpl-soc-estrutura">
+    <section>
+      <h4>Estrutura social</h4>
+      <p>Organização de posições e relações na sociedade, incluindo classes, status e poder.</p>
+      <p>Instituições moldam comportamentos e distribuem recursos.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Mobilidade social</div>
+          <div class="flip-face back">Mudança de posição na estrutura social.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+      <div class="quiz-question">Estratificação social refere-se a:</div>
+      <div class="choices" data-correct="4">
+        <div class="choice">1. Cultura de massa</div>
+        <div class="choice">2. Controle social</div>
+        <div class="choice">3. Socialização</div>
+        <div class="choice">4. Distribuição hierárquica de grupos</div>
+        <div class="choice">5. Anomia</div>
+      </div>
+      <div class="explanation">Estratificação é a disposição hierárquica de grupos segundo critérios como renda e poder.</div>
+       <div class="quiz-nav">
+    <button class="btn small" id="prevQuestion">Anterior</button>
+    <button class="btn small" id="nextQuestion">Próxima</button>
+  </div>
+    </section>
+  </template>
+
+  <!-- FILOSOFIA -->
+  <template id="tpl-fil-eticamoral">
+    <section>
+      <h4>Ética e moral</h4>
+      <p>Ética reflete sobre valores e princípios; moral é o conjunto de normas de um grupo.</p>
+      <p>Debates incluem universalismo, relativismo e responsabilidade.</p>
+    </section>
+    <section data-type="flashcards">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Deontologia</div>
+          <div class="flip-face back">Ética do dever, centrada em regras e obrigações.</div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-face front">Consequencialismo</div>
+          <div class="flip-face back">Avalia atos pelos resultados produzidos.</div>
+        </div>
+      </div>
+    </section>
+    <section data-type="quiz">
+    <div class="question-block quiz-question" data-index="0">
+        <div class="question-text">1 No periodo "os alunos fizeram a prova" "a prova" é uma:</div>
+        <div class="choices" data-correct="2">
+        <div class="choice">1. Segue tradições culturais</div>
+        <div class="choice">2. Maximiza a felicidade geral</div>
+        <div class="choice">3. É aprovada pela maioria</div>
+        <div class="choice">4. Respeita princípios deontológicos</div>
+        <div class="choice">5. Evita conflitos</div>
+      </div>
+      <div class="explanation">O critério utilitarista é a maximização da utilidade/felicidade coletiva.</div>
+       <div class="quiz-nav">
+  <div class="quiz-nav">
+  <button class="btn small" id="prevQuestion">Anterior</button>
+  <button class="btn small" id="nextQuestion">Próxima</button>
+  <button class="btn small" id="finishQuiz">Finalizar Quiz</button>
+</div>
+<div class="quiz-result" id="quizResult" style="display:none;"></div>
+
+  </div>
+    </section>
+  </template>
+
+
+<div class="quiz-result" id="quizResult" style="display:none; margin-top:20px; font-weight:bold;"></div>
+
+  <footer>
+    <div class="container">
+      Obrigado a todos os meus professores pelo apoio e dedicação — este projeto existe por causa de vocês.
+    </div>
+  </footer>
+ <script src="script.js"></script>
+</body>
+</html>
