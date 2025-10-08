@@ -1,0 +1,382 @@
+  :root {
+      /* Paleta claro */
+      --bg-light: #f7fbff;
+      --panel-light: #ffffff;
+      --text-light: #0f172a;
+      --accent-light: #3b82f6;    /* azul claro */
+      --accent-light-2: #60a5fa;  /* azul mais claro */
+      --muted-light: #e2e8f0;
+
+      /* Paleta escuro */
+      --bg-dark: #0b1020;
+      --panel-dark: #0f152b;
+      --text-dark: #e5e7eb;
+      --accent-dark: #1e3a8a;     /* azul escuro */
+      --accent-dark-2: #1d4ed8;   /* azul */
+      --muted-dark: #1f2937;
+
+      /* Tipografia e UI */
+      --radius: 16px;
+      --radius-sm: 12px;
+      --gap: 16px;
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.18);
+      --shadow-md: 0 10px 24px rgba(0,0,0,0.14);
+      --shadow-sm: 0 6px 16px rgba(0,0,0,0.12);
+      --transition: 220ms cubic-bezier(.2,.6,.2,1);
+    }
+
+    /* Tema */
+    .light {
+      --bg: var(--bg-light);
+      --panel: var(--panel-light);
+      --text: var(--text-light);
+      --accent: var(--accent-light);
+      --accent-2: var(--accent-light-2);
+      --muted: var(--muted-light);
+    }
+    .dark {
+      --bg: var(--bg-dark);
+      --panel: var(--panel-dark);
+      --text: var(--text-dark);
+      --accent: var(--accent-dark);
+      --accent-2: var(--accent-dark-2);
+      --muted: var(--muted-dark);
+    }
+
+    /* Base */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, color-mix(in oklab, var(--bg) 70%, var(--panel) 30%) 100%);
+      color: var(--text);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    a { color: inherit; }
+
+    /* Layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(1.2) blur(8px);
+      background: color-mix(in oklab, var(--bg) 70%, transparent 30%);
+      border-bottom: 1px solid color-mix(in oklab, var(--muted) 40%, transparent 60%);
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--shadow-sm);
+    }
+    .title {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    /* Botões */
+    .btn {
+      appearance: none;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: color-mix(in oklab, var(--accent) 30%, var(--muted) 70%);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 85%, var(--panel) 15%), var(--accent-2));
+      color: white;
+      border: 1px solid color-mix(in oklab, var(--accent-2) 50%, transparent 50%);
+    }
+    .btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .btn.ghost {
+      background: color-mix(in oklab, var(--panel) 70%, transparent 30%);
+    }
+    .btn.small { padding: 8px 12px; border-radius: 10px; }
+    .btn.tab {
+      border-radius: 10px;
+      background: color-mix(in oklab, var(--panel) 70%, transparent 30%);
+    }
+    .btn.tab.active {
+      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 40%, var(--panel) 60%), color-mix(in oklab, var(--accent-2) 40%, var(--panel) 60%));
+      color: white;
+      border-color: color-mix(in oklab, var(--accent) 50%, transparent 50%);
+    }
+
+    /* Seções */
+    .card {
+      background: var(--panel);
+      border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 20px;
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    /* Grade de matérias */
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .subject-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .subject-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    /* Lista de tópicos */
+    .topics {
+      margin-top: 24px;
+      display: none;
+      gap: 10px;
+    }
+    .topics.active { display: grid; }
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .topic-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Modal tela cheia */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: color-mix(in oklab, black 50%, transparent 50%);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition);
+      z-index: 80;
+    }
+    .overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .study-modal {
+      position: fixed;
+      inset: 40px;
+      background: var(--panel);
+      border-radius: 20px;
+      border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(12px);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+      z-index: 90;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .study-modal.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-header, .modal-footer {
+      padding: 14px 16px;
+      border-bottom: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+    }
+    .modal-footer { border-top: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%); border-bottom: none; }
+    .modal-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      padding: 10px 16px;
+    }
+    .tab-panels {
+      padding: 16px;
+      overflow: auto;
+    }
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* Conteúdo */
+    .content-area p { line-height: 1.7; margin: 12px 0; }
+    .content-area h4 { margin: 16px 0 8px; }
+
+    /* Flashcards */
+    .flashcards-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .flip-card {
+      perspective: 900px;
+    }
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      transform-style: preserve-3d;
+      transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+    }
+    .flip-inner.flipped { transform: rotateY(180deg); }
+    .flip-face {
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      text-align: center;
+      background: color-mix(in oklab, var(--panel) 80%, var(--accent) 20%);
+      border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+      box-shadow: var(--shadow-sm);
+      backface-visibility: hidden;
+    }
+    .flip-face.back {
+      transform: rotateY(180deg);
+      background: color-mix(in oklab, var(--panel) 80%, var(--accent-2) 20%);
+    }
+
+    /* Quiz */
+    .quiz-question { font-weight: 700; margin-bottom: 12px; }
+    .choices {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .choice {
+      background: color-mix(in oklab, var(--panel) 80%, transparent 20%);
+      border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+    }
+    .choice:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .choice.correct { border-color: #22c55e; background: color-mix(in oklab, #22c55e 20%, var(--panel) 80%); }
+    .choice.incorrect { border-color: #ef4444; background: color-mix(in oklab, #ef4444 20%, var(--panel) 80%); }
+    .explanation {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      background: color-mix(in oklab, var(--panel) 80%, transparent 20%);
+      border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent 50%);
+      display: none;
+    }
+    .explanation.visible { display: block; }
+
+    /* Rodapé */
+    footer {
+      margin-top: 28px;
+      padding: 18px 24px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    /* Responsivo */
+    @media (max-width: 720px) {
+      .study-modal { inset: 16px; border-radius: 16px; }
+      header { padding: 12px 16px; }
+    }
+    .quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.quiz-result {
+  padding: 12px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--panel) 80%, var(--accent) 20%);
+  margin-top: 16px;
+}
+/* Logo (círculo com emoji centralizado) */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: var(--shadow-sm);
+}
+
+/* Tamanho e alinhamento do emoji */
+.logo-emoji {
+  font-size: 22px;
+  line-height: 1;
+  display: inline-block;
+  transform: translateY(1px); /* ajuste fino se necessário */
+}
+
+/* Ícones das matérias */
+.subject-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  margin-left: 8px;
+}
+
+/* Emoji dentro do botão */
+.subject-icon .emoji {
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Ajuste para alinhamento do texto do botão */
+.subject-btn { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.subject-label { font-weight:600; }
+
+/* Se quiser cores consistentes no conjunto de ícones, defina 'color' e use SVG; emojis mantêm a cor do sistema */
